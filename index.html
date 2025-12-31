@@ -3,38 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>CaluTecno | Soluções Digitais, Consultoria e Tecnologia</title>
+
+    <!-- SEO Básico -->
+    <meta
+      name="description"
+      content="A CaluTecno oferece soluções digitais completas: desenvolvimento de software, consultoria em tecnologia, redes de telecomunicações, cabeamento estruturado, CCTV e treinamentos personalizados para empresas."
+    />
+    <meta
+      name="keywords"
+      content="CaluTecno, soluções digitais, desenvolvimento de software, consultoria em tecnologia, redes de telecomunicações, cabeamento estruturado, CCTV, tecnologia empresarial"
+    />
+    <meta name="author" content="CaluTecno" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="CaluTecno | Soluções Digitais Inteligentes"
+    />
+    <meta
+      property="og:description"
+      content="Impulsionamos empresas com tecnologia de ponta: software, consultoria, redes, CCTV e soluções digitais à medida."
+    />
+    <meta property="og:url" content="https://www.calutecno.ao" />
+    <meta
+      property="og:image"
+      content="https://www.calutecno.ao/public/banner.png"
+    />
+    <meta property="og:site_name" content="CaluTecno" />
+    <meta property="og:locale" content="pt_PT" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="CaluTecno | Soluções Digitais Inteligentes"
+    />
+    <meta
+      name="twitter:description"
+      content="Consultoria em tecnologia, desenvolvimento de software, redes e soluções digitais para empresas modernas."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.calutecno.ao/public/banner.png"
+    />
+
+    <!-- Favicon (opcional mas recomendado) -->
+    <link
+      rel="icon"
+      href="./public/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- CSS -->
     <link href="./styles/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-gray-100 scroll-smooth">
     <header class="flex items-center border-b border-gray-200 bg-white py-2">
-      <div class="mx-auto w-7xl flex justify-between items-center">
-        <div class="py-4">
+      <div
+        class="mx-auto w-full max-w-7xl px-4 flex justify-between items-center"
+      >
+        <a href="/" class="py-4">
           <img
             src="./public/assets/logo1.png"
-            class="h-12"
+            class="h-8 sm:h-10 md:h-12"
             alt="CaluTecno Logo"
           />
-        </div>
-        <nav>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden flex flex-col gap-1 p-2" id="mobile-menu-btn">
+          <span class="w-6 h-0.5 bg-gray-700"></span>
+          <span class="w-6 h-0.5 bg-gray-700"></span>
+          <span class="w-6 h-0.5 bg-gray-700"></span>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:block">
           <ul class="flex gap-10">
             <li>
-              <a href="#" class="text-gray-700 hover:text-blue-500"
+              <a href="/" class="text-gray-700 hover:text-blue-500"
                 >Página Inicial</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-700 hover:text-blue-500">Serviços</a>
+              <a href="#servicos" class="text-gray-700 hover:text-blue-500"
+                >Serviços</a
+              >
             </li>
             <li>
-              <a href="#" class="text-gray-700 hover:text-blue-500"
+              <a href="#diferencial" class="text-gray-700 hover:text-blue-500"
                 >Diferenciais</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#contacto"
                 class="hover:text-white bg-blue-500 px-6 py-3 rounded-full text-white"
+                >Fala Conosco</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="hidden fixed top-0 left-0 w-full h-screen bg-white z-50 lg:hidden"
+        id="mobile-menu"
+      >
+        <div
+          class="flex justify-between items-center border-b border-gray-200 px-4 py-2"
+        >
+          <div class="py-4">
+            <img
+              src="./public/assets/logo1.png"
+              class="h-8 sm:h-10"
+              alt="CaluTecno Logo"
+            />
+          </div>
+          <button class="p-2" id="close-menu-btn">
+            <svg
+              class="w-6 h-6 text-gray-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="px-4 py-8">
+          <ul class="flex flex-col gap-6">
+            <li>
+              <a href="/" class="text-gray-700 hover:text-blue-500 text-lg"
+                >Página Inicial</a
+              >
+            </li>
+            <li>
+              <a
+                href="#servicos"
+                class="text-gray-700 hover:text-blue-500 text-lg"
+                >Serviços</a
+              >
+            </li>
+            <li>
+              <a
+                href="#diferencial"
+                class="text-gray-700 hover:text-blue-500 text-lg"
+                >Diferenciais</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contacto"
+                class="bg-blue-500 px-6 py-3 rounded-full text-white text-center block hover:bg-blue-600"
                 >Fala Conosco</a
               >
             </li>
@@ -44,8 +175,12 @@
     </header>
 
     <main>
-      <section class="h-165 flex items-center bg-blue-300/10">
-        <div class="mx-auto w-7xl grid grid-cols-2 items-center h-full">
+      <section
+        class="lg:h-165 flex items-center bg-blue-300/10 px-4 py-16 lg:py-0"
+      >
+        <div
+          class="mx-auto w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center h-full"
+        >
           <div class="flex flex-col gap-4">
             <div
               class="bg-blue-500/10 text-sm text-blue-500 font-semibold px-4 py-2 rounded-full w-max"
@@ -53,35 +188,39 @@
               <span class="rounded-full bg-blue-500"></span>
               Inovação Constante
             </div>
-            <h1 class="text-6xl font-bold leading-tight max-w-xl">
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-xl"
+            >
               Transformando Negócios através da
               <span class="text-blue-500">Tecnologia</span>
             </h1>
 
-            <p class="max-w-xl">
+            <p class="max-w-xl text-sm sm:text-base">
               Soluções digitais personalizadas, consultória estratégica e
               desenvolvimento de ponta para acelerar o crescimento da sua
               empresa
             </p>
 
-            <div class="flex gap-4 mt-4">
+            <div class="flex flex-col sm:flex-row gap-4 mt-4">
               <a
-                href="#"
-                class="bg-blue-500 text-white py-3 px-5 rounded-full hover:bg-blue-700"
+                href="#servicos"
+                class="bg-blue-500 text-white py-3 px-5 rounded-full hover:bg-blue-700 text-center"
                 >Conheça nossos serviços</a
               >
               <a
-                href="#"
-                class="bg-white text-gray-600 py-3 px-5 rounded-full hover:bg-gray-200"
+                href="https://wa.me/244959675679?text=Olá%20CaluTecno,%20gostaria%20de%20mais%20informações%20sobre%20os%20vossos%20serviços."
+                class="bg-white text-gray-600 py-3 px-5 rounded-full hover:bg-gray-200 text-center"
+                rel="noopener noreferrer"
+                target="_blank"
                 >Entrar em contato</a
               >
             </div>
           </div>
           <div
-            class="w-full h-120 pb-8 flex items-end shadow-2xl rounded-md bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0RO5vCuQZXzUDePZAVzQrT4s2RsfKlds-P23GI2_towbw3Vw64p7jx6J9CXg1A6MLtg7lhLf_DoKYSMTc9n5O3oYuls9Ejprc9fu6hOHcZIt9yFYVlZ-XINi8TD2IEtdIct7q9a6SSFD_8qRJNrmJWUwvSEX_eBGp9ikXjghkH82wYx3RdFwmY--60L8DHCJgaLD4APBZPrDQn6o6XJ5pbgDn5uDeJGFzFPpQDh9y4iiQQxZKikgEEWpe6BQyYFJzrg8YzHaW0Q')]"
+            class="w-full h-80 sm:h-96 md:h-120 lg:h-120 pb-8 flex items-end shadow-2xl rounded-md bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0RO5vCuQZXzUDePZAVzQrT4s2RsfKlds-P23GI2_towbw3Vw64p7jx6J9CXg1A6MLtg7lhLf_DoKYSMTc9n5O3oYuls9Ejprc9fu6hOHcZIt9yFYVlZ-XINi8TD2IEtdIct7q9a6SSFD_8qRJNrmJWUwvSEX_eBGp9ikXjghkH82wYx3RdFwmY--60L8DHCJgaLD4APBZPrDQn6o6XJ5pbgDn5uDeJGFzFPpQDh9y4iiQQxZKikgEEWpe6BQyYFJzrg8YzHaW0Q')]"
           >
             <div
-              class="bg-white rounded-md flex flex-col gap-2 p-4 w-1/2 relative -ml-20 animate-float transition-all duration-500"
+              class="bg-white rounded-md flex flex-col gap-2 p-4 w-full sm:w-2/3 md:w-1/2 relative -ml-4 sm:-ml-10 md:-ml-20 animate-float transition-all duration-500"
             >
               <div class="flex items-center gap-2">
                 <div
@@ -102,13 +241,15 @@
         </div>
       </section>
 
-      <section class="bg-white py-16">
-        <div class="w-7xl mx-auto grid grid-cols-2 gap-10">
+      <section class="bg-white py-16 px-4">
+        <div
+          class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10"
+        >
           <div
-            class="flex items-start rounded-md shadow-lg w-full h-100 object-cover bg-no-repeat bg-cover bg-center bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDy091b3Yz0Nu3l5DLxHILal7dqfDcupAwR2AI9UwPRYzYbc23wgkNyuQ0g46YRXQ-eBFjSDDEmu0ugDzAxCSKaqQ2gUjQNd4kdwxeiI1U9tFRnh58lEj_4PDVw1cTSX739h2NZsXo_pwpUyqEfFWrPz0isaCxLInkKr0fy-GWM00-g1yRSLoClouPgnGxNvSTAMjeaaYlqh9Vr6fQFWEFtvThDeRgp-5iw6yJ-6FPnpl1_TCs_IWbWfMUiRLV79KYHMq4-fNRnA')]"
+            class="flex items-start rounded-md shadow-lg w-full h-80 sm:h-96 md:h-100 object-cover bg-no-repeat bg-cover bg-center bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDy091b3Yz0Nu3l5DLxHILal7dqfDcupAwR2AI9UwPRYzYbc23wgkNyuQ0g46YRXQ-eBFjSDDEmu0ugDzAxCSKaqQ2gUjQNd4kdwxeiI1U9tFRnh58lEj_4PDVw1cTSX739h2NZsXo_pwpUyqEfFWrPz0isaCxLInkKr0fy-GWM00-g1yRSLoClouPgnGxNvSTAMjeaaYlqh9Vr6fQFWEFtvThDeRgp-5iw6yJ-6FPnpl1_TCs_IWbWfMUiRLV79KYHMq4-fNRnA')]"
           >
             <div
-              class="bg-white shadow-md rounded-md flex flex-col gap-2 p-4 w-1/2 relative -ml-10 mt-20 animate-float transition-all duration-500"
+              class="bg-white shadow-md rounded-md flex flex-col gap-2 p-4 w-full sm:w-2/3 md:w-1/2 relative -ml-4 sm:-ml-10 mt-20 animate-float transition-all duration-500"
             >
               <div class="flex items-center gap-2">
                 <div
@@ -126,11 +267,15 @@
 
           <div class="flex flex-col gap-3">
             <span class="text-blue-500 uppercase font-bold">Quem somos</span>
-            <h2 class="text-3xl w-xl leading-tight font-bold">
+            <h2
+              class="text-2xl sm:text-3xl w-full max-w-xl leading-tight font-bold"
+            >
               Parceiros estratégicos na sua jornada digital
             </h2>
 
-            <div class="flex flex-col gap-4 mt-4 text-gray-700">
+            <div
+              class="flex flex-col gap-4 mt-4 text-gray-700 text-sm sm:text-base"
+            >
               <p>
                 A Calutecno é uma empresa especializada em soluções digitais
                 personalizadas, consultoria estratégica e desenvolvimento de
@@ -144,32 +289,44 @@
               </p>
             </div>
 
-            <div class="flex gap-10 mt-4">
+            <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 mt-4">
               <div class="flex flex-col gap-2 border-l-4 pl-4 border-blue-500">
-                <h3 class="text-3xl font-bold">10+</h3>
-                <span class="text-gray-500">Anos de Experiência</span>
+                <h3 class="text-2xl sm:text-3xl font-bold">10+</h3>
+                <span class="text-gray-500 text-sm sm:text-base"
+                  >Anos de Experiência</span
+                >
               </div>
               <div class="flex flex-col gap-2 border-l-4 pl-4 border-blue-500">
-                <h3 class="text-3xl font-bold">200+</h3>
-                <span class="text-gray-500">Projetos Entregues</span>
+                <h3 class="text-2xl sm:text-3xl font-bold">200+</h3>
+                <span class="text-gray-500 text-sm sm:text-base"
+                  >Projetos Entregues</span
+                >
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="py-16">
-        <div class="mx-auto w-7xl flex flex-col">
+      <section class="py-16 px-4" id="servicos">
+        <div class="mx-auto w-full max-w-7xl flex flex-col">
           <div class="flex flex-col items-center justify-center gap-2">
-            <span class="text-blue-500 uppercase font-bold">O que Fazemos</span>
-            <h2 class="text-3xl font-bold">Nossos Serviços Especializados</h2>
-            <p class="text-md w-2xl text-center text-gray-600">
+            <span class="text-blue-500 uppercase font-bold text-sm sm:text-base"
+              >O que Fazemos</span
+            >
+            <h2 class="text-2xl sm:text-3xl font-bold text-center">
+              Nossos Serviços Especializados
+            </h2>
+            <p
+              class="text-sm sm:text-md w-full max-w-2xl text-center text-gray-600"
+            >
               Soluções completas desenhadas para atender as demandas
               especificadas do seu setor com tecnologia
             </p>
           </div>
 
-          <div class="grid grid-cols-3 gap-4 mt-15">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 sm:mt-15"
+          >
             <div
               class="border-gray-200 hover:bg-white duration-150 transition-all border p-6 rounded-lg"
             >
@@ -203,6 +360,7 @@
                 Migração e gestão de infraestrutura na nuvem para garantir alta
                 disponibilidade e redução de custos operacionais.
               </p>
+
               <a
                 href="#"
                 class="mt-3 flex gap-1 text-sm text-blue-500 items-center"
@@ -223,6 +381,7 @@
                 Proteção de dados corporativos com auditorias, implementação de
                 protocolos de segurança e conformidade LGPD.
               </p>
+
               <a
                 href="#"
                 class="mt-3 flex gap-1 text-sm text-blue-500 items-center"
@@ -243,6 +402,7 @@
                 Análise estratégica de processos tecnológicos para otimizar
                 recursos e implementar melhores práticas de mercado.
               </p>
+
               <a
                 href="#"
                 class="mt-3 flex gap-1 text-sm text-blue-500 items-center"
@@ -263,6 +423,7 @@
                 Desenvolvimento de aplicativos nativos e híbridos para IOS e
                 Android, focados em performance e usabilidade.
               </p>
+
               <a
                 href="#"
                 class="mt-3 flex gap-1 text-sm text-blue-500 items-center"
@@ -283,6 +444,7 @@
                 Atendimento especializado 24/7 para garantir a continuidade dos
                 seus negócios sem interrupções e com bastante simplicidade.
               </p>
+
               <a
                 href="#"
                 class="mt-3 flex gap-1 text-sm text-blue-500 items-center"
@@ -294,29 +456,34 @@
         </div>
       </section>
 
-      <section class="py-16 bg-[#06488e]">
-        <div class="mx-auto w-7xl flex gap-10">
-          <div class="flex flex-col">
+      <section class="py-16 bg-[#06488e] px-4" id="diferencial">
+        <div class="mx-auto w-full max-w-7xl flex flex-col lg:flex-row gap-10">
+          <div class="flex flex-col lg:w-1/2">
             <div class="flex flex-col gap-5">
-              <span class="text-blue-500 uppercase font-bold"
+              <span
+                class="text-blue-500 uppercase font-bold text-sm sm:text-base"
                 >Por que escolher a calutecno?</span
               >
-              <h2 class="text-4xl w-sm font-bold text-white">
+              <h2
+                class="text-2xl sm:text-3xl lg:text-4xl w-full max-w-sm font-bold text-white"
+              >
                 Excelência que impulsiona resultados
               </h2>
-              <p class="text-md w-sm text-gray-300">
+              <p class="text-sm sm:text-md w-full max-w-sm text-gray-300">
                 Não entregamos apenas código; entregamos soluções de negócio
                 robustas e escaláveis pensadas para o seu futuro.
               </p>
               <a
-                href="#"
-                class="mt-4 hover:text-white self-start bg-blue-500 px-6 py-3 rounded-full text-white"
+                href="https://wa.me/244959675679?text=Olá%20CaluTecno,%20gostaria%20de%20mais%20informações%20sobre%20os%20vossos%20serviços."
+                rel="noopener noreferrer"
+                target="_blank"
+                class="mt-4 hover:text-white self-start bg-blue-500 px-6 py-3 rounded-full text-white text-center"
                 >Fale com um especialista</a
               >
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:w-1/2">
             <div class="flex gap-4">
               <div>
                 <div
@@ -329,8 +496,10 @@
                 </div>
               </div>
               <div class="flex flex-col gap-3">
-                <h3 class="text-lg font-bold text-white">Metodologia Ágil</h3>
-                <p class="text-md text-gray-300">
+                <h3 class="text-base sm:text-lg font-bold text-white">
+                  Metodologia Ágil
+                </h3>
+                <p class="text-sm sm:text-md text-gray-300">
                   Entregas rápidas e incrementais, permitindo adaptação
                   constante às necessidades do mercado.
                 </p>
@@ -345,10 +514,10 @@
                 </div>
               </div>
               <div class="flex flex-col gap-3">
-                <h3 class="text-lg font-bold text-white">
+                <h3 class="text-base sm:text-lg font-bold text-white">
                   Equipe Especializada
                 </h3>
-                <p class="text-md text-gray-300">
+                <p class="text-sm sm:text-md text-gray-300">
                   Profissionais sêniores certificados nas tecnologias mais
                   modernas do mercado.
                 </p>
@@ -366,10 +535,10 @@
                 </div>
               </div>
               <div class="flex flex-col gap-3">
-                <h3 class="text-lg font-bold text-white">
+                <h3 class="text-base sm:text-lg font-bold text-white">
                   Segurança Garantida
                 </h3>
-                <p class="text-md text-gray-300">
+                <p class="text-sm sm:text-md text-gray-300">
                   Desenvolvimento focado em "Security by Design", protegendo
                   seus ativos desde a concepção.
                 </p>
@@ -384,8 +553,10 @@
                 </div>
               </div>
               <div class="flex flex-col gap-3">
-                <h3 class="text-lg font-bold text-white">Suporte Dedicado</h3>
-                <p class="text-md text-gray-300">
+                <h3 class="text-base sm:text-lg font-bold text-white">
+                  Suporte Dedicado
+                </h3>
+                <p class="text-sm sm:text-md text-gray-300">
                   Acompanhamento contínuo pós-lançamento para garantir o sucesso
                   do projeto.
                 </p>
@@ -395,25 +566,29 @@
         </div>
       </section>
 
-      <section class="py-22 bg-white">
-        <div class="mx-auto w-7xl">
+      <section class="py-16 sm:py-22 bg-white px-4">
+        <div class="mx-auto w-full max-w-7xl">
           <div class="flex flex-col items-center justify-center gap-2">
-            <span class="text-blue-500 uppercase font-bold"
+            <span class="text-blue-500 uppercase font-bold text-sm sm:text-base"
               >Quem Confia em nós</span
             >
-            <h2 class="text-3xl font-bold">Nossos Parceiros</h2>
-            <p class="text-md w-2xl text-center text-gray-600">
+            <h2 class="text-2xl sm:text-3xl font-bold">Nossos Parceiros</h2>
+            <p
+              class="text-sm sm:text-md w-full max-w-2xl text-center text-gray-600"
+            >
               Colaboramos com empresas visionárias para construir o futuro da
               tecnologia.
             </p>
           </div>
-          <div class="flex items-center gap-2 mt-15">
+          <div
+            class="flex flex-wrap items-center justify-center gap-6 sm:gap-2 mt-10 sm:mt-15"
+          >
             <a
-              class="group w-full flex justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+              class="group w-full sm:w-auto flex justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
               href="#"
             >
               <svg
-                class="h-15 w-auto text-blue-300"
+                class="h-12 sm:h-15 w-auto text-blue-300"
                 fill="currentColor"
                 viewBox="0 0 160 40"
                 xmlns="http://www.w3.org/2000/svg"
@@ -440,11 +615,11 @@
               </svg>
             </a>
             <a
-              class="group w-full flex justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+              class="group w-full sm:w-auto flex justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
               href="#"
             >
               <svg
-                class="h-15 w-auto text-gray-300"
+                class="h-12 sm:h-15 w-auto text-gray-300"
                 fill="currentColor"
                 viewBox="0 0 160 40"
                 xmlns="http://www.w3.org/2000/svg"
@@ -462,13 +637,12 @@
                 </text>
               </svg>
             </a>
-
             <a
-              class="group w-full flex justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+              class="group w-full sm:w-auto flex justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
               href="#"
             >
               <svg
-                class="h-15 w-auto text-blue-300"
+                class="h-12 sm:h-15 w-auto text-blue-300"
                 fill="currentColor"
                 viewBox="0 0 160 40"
                 xmlns="http://www.w3.org/2000/svg"
@@ -493,13 +667,12 @@
                 </text>
               </svg>
             </a>
-
             <a
-              class="group w-full flex justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+              class="group w-full sm:w-auto flex justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
               href="#"
             >
               <svg
-                class="h-15 w-auto text-blue-300"
+                class="h-12 sm:h-15 w-auto text-blue-300"
                 fill="currentColor"
                 viewBox="0 0 180 40"
                 xmlns="http://www.w3.org/2000/svg"
@@ -535,11 +708,11 @@
             </a>
 
             <a
-              class="group w-full flex justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+              class="group w-full sm:w-auto flex justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
               href="#"
             >
               <svg
-                class="h-15 w-auto text-blue-300"
+                class="h-12 sm:h-15 w-auto text-blue-300"
                 fill="currentColor"
                 viewBox="0 0 160 40"
                 xmlns="http://www.w3.org/2000/svg"
@@ -568,15 +741,19 @@
         </div>
       </section>
 
-      <section class="py-16">
-        <div class="mx-auto w-7xl">
-          <div class="bg-white shadow-md rounded-md flex gap-4">
+      <section class="py-16 px-4" id="contacto">
+        <div class="mx-auto w-full max-w-7xl">
+          <div
+            class="bg-white shadow-md rounded-md flex flex-col lg:flex-row gap-3"
+          >
             <div
-              class="bg-blue-500 h-full w-1/2 rounded-bl-md rounded-tl-md px-8 py-16"
+              class="bg-blue-500 h-full w-full lg:w-1/2 rounded-tl-md rounded-tr-md lg:rounded-tr-none lg:rounded-bl-md px-6 sm:px-8 py-12 sm:py-16"
             >
               <div class="flex flex-col gap-2">
-                <h3 class="text-white text-2xl font-bold">Entre em contato</h3>
-                <p class="text-md text-gray-100/80 max-w-md">
+                <h3 class="text-white text-xl sm:text-2xl font-bold">
+                  Entre em contato
+                </h3>
+                <p class="text-sm sm:text-md text-gray-100/80 max-w-md">
                   Estamos prontos para iniciar o seu próximo projeto.
                 </p>
               </div>
@@ -591,8 +768,12 @@
                     </div>
                   </div>
                   <div class="">
-                    <h4 class="text-md font-bold text-white/90">Localização</h4>
-                    <p class="text-sm text-gray-100/80">Luanda, Morro Bento</p>
+                    <h4 class="text-sm sm:text-md font-bold text-white/90">
+                      Localização
+                    </h4>
+                    <p class="text-xs sm:text-sm text-gray-100/80">
+                      Luanda, Morro Bento
+                    </p>
                   </div>
                 </div>
                 <div class="flex gap-3">
@@ -604,8 +785,12 @@
                     </div>
                   </div>
                   <div class="">
-                    <h4 class="text-md font-bold text-white/90">E-mail</h4>
-                    <p class="text-sm text-gray-100/80">info@calutecno.ao</p>
+                    <h4 class="text-sm sm:text-md font-bold text-white/90">
+                      E-mail
+                    </h4>
+                    <p class="text-xs sm:text-sm text-gray-100/80">
+                      info@calutecno.ao
+                    </p>
                   </div>
                 </div>
                 <div class="flex gap-3">
@@ -617,14 +802,20 @@
                     </div>
                   </div>
                   <div class="">
-                    <h4 class="text-md font-bold text-white/90">Telefone</h4>
-                    <p class="text-sm text-gray-100/80">+244 921538972</p>
+                    <h4 class="text-sm sm:text-md font-bold text-white/90">
+                      Telefone
+                    </h4>
+                    <p class="text-xs sm:text-sm text-gray-100/80">
+                      +244 921538972
+                    </p>
                   </div>
                 </div>
               </div>
 
               <div class="flex flex-col gap-2 mt-10">
-                <p class="text-white/90 text-sm">Siga-nos nas redes sociais</p>
+                <p class="text-white/90 text-xs sm:text-sm">
+                  Siga-nos nas redes sociais
+                </p>
                 <div class="flex gap-2">
                   <a
                     href="#"
@@ -655,50 +846,56 @@
             </div>
 
             <form
-              class="flex flex-col gap-5 w-1/1 mx-w-full pr-6 pl-2 justify-center"
+              class="flex flex-col gap-5 w-full lg:w-1/1 px-6 sm:pr-6 sm:pl-2 py-12 sm:py-0 justify-center"
+              action="mailto:devmakengo2021@gmail.com"
+              method="POST"
+              enctype="text/plain"
             >
-              <div class="grid grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div class="flex gap-2 flex-col">
-                  <label for="nome">Nome Completo</label>
+                  <label for="nome" class="text-sm">Nome Completo</label>
                   <input
                     type="text"
                     name="nome"
                     placeholder="Seu nome"
-                    class="bg-gray-100/80 border border-gray-300 py-3 px-4 rounded-md"
+                    class="bg-gray-100/80 border border-gray-300 py-3 px-4 rounded-md text-sm"
                   />
                 </div>
                 <div class="flex gap-2 flex-col">
-                  <label for="nome">E-mail Corporativo</label>
+                  <label for="email" class="text-sm">E-mail Corporativo</label>
                   <input
                     type="email"
-                    name="nome"
+                    name="email"
                     placeholder="nome@empresa.com"
-                    class="bg-gray-100/80 border border-gray-300 py-3 px-4 rounded-md"
+                    class="bg-gray-100/80 border border-gray-300 py-3 px-4 rounded-md text-sm"
                   />
                 </div>
               </div>
               <div class="grid grid-cols-1 gap-2">
-                <label for="assunto">Assunto</label>
+                <label for="assunto" class="text-sm">Assunto</label>
                 <select
                   name="assunto"
-                  id=""
-                  class="bg-gray-100/80 border border-gray-300 py-3 px-4 rounded-md"
+                  id="assunto"
+                  class="bg-gray-100/80 border border-gray-300 py-3 px-4 rounded-md text-sm"
                 >
                   <option value="">Selecione o assunto</option>
+                  <option value="Orçamento">Orçamento</option>
+                  <option value="Consultoria">Consultoria</option>
+                  <option value="Suporte Técnico">Suporte Técnico</option>
                 </select>
               </div>
               <div class="grid grid-cols-1 gap-2">
-                <label for="mensagem">Mensagem</label>
+                <label for="mensagem" class="text-sm">Mensagem</label>
                 <textarea
-                  name=""
+                  name="mensagem"
                   placeholder="Como podemos ajudar?"
-                  class="bg-gray-100/80 border border-gray-300 py-3 px-4 rounded-md h-30"
+                  class="bg-gray-100/80 border border-gray-300 py-3 px-4 rounded-md h-30 text-sm"
                 ></textarea>
               </div>
-
               <div class="flex">
                 <button
-                  class="mt-4 hover:text-white self-start bg-blue-500 px-6 py-3 rounded-full text-white"
+                  type="submit"
+                  class="mt-4 hover:text-white self-start bg-blue-500 px-6 py-3 rounded-full text-white text-sm sm:text-base"
                 >
                   Enviar Mensagem
                 </button>
@@ -807,6 +1004,26 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
+
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const closeMenuBtn = document.getElementById("close-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+      });
+
+      closeMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+
+      // Close menu when clicking on a link
+      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
     </script>
   </body>
 </html>
