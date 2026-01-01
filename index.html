@@ -62,7 +62,10 @@
     <link href="./styles/output.css" rel="stylesheet" />
   </head>
   <body class="bg-gray-100 scroll-smooth">
-    <header class="flex items-center border-b border-gray-200 bg-white py-2">
+    <header
+      id="site-header"
+      class="flex items-center border-b border-gray-200 bg-white py-2 transition-all duration-300 ease-in-out"
+    >
       <div
         class="mx-auto w-full max-w-7xl px-4 flex justify-between items-center"
       >
@@ -772,7 +775,7 @@
                       Localização
                     </h4>
                     <p class="text-xs sm:text-sm text-gray-100/80">
-                      Luanda, Morro Bento
+                      Centralidade zango 8mil bloco U casa n 28
                     </p>
                   </div>
                 </div>
@@ -806,7 +809,7 @@
                       Telefone
                     </h4>
                     <p class="text-xs sm:text-sm text-gray-100/80">
-                      +244 921538972
+                      +244 959 675 671
                     </p>
                   </div>
                 </div>
@@ -862,7 +865,9 @@
                   />
                 </div>
                 <div class="flex gap-2 flex-col">
-                  <label for="email" class="text-sm">E-mail Corporativo</label>
+                  <label for="email" class="text-sm"
+                    >E-mail (preferencialmente corporativo)</label
+                  >
                   <input
                     type="email"
                     name="email"
@@ -1023,6 +1028,34 @@
         link.addEventListener("click", () => {
           mobileMenu.classList.add("hidden");
         });
+      });
+
+      const header = document.getElementById("site-header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY >= 100) {
+          header.classList.add(
+            "fixed",
+            "top-0",
+            "left-0",
+            "w-full",
+            "z-50",
+            "shadow-md",
+            "backdrop-blur",
+            "bg-white/90"
+          );
+        } else {
+          header.classList.remove(
+            "fixed",
+            "top-0",
+            "left-0",
+            "w-full",
+            "z-50",
+            "shadow-md",
+            "backdrop-blur",
+            "bg-white/90"
+          );
+        }
       });
     </script>
   </body>
